@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_action_dot"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:id="@+id/dot"
+        android:layout_marginLeft="10dp" />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/dot"
+        android:layout_toRightOf="@+id/dot"
+        app:cardBackgroundColor="#2D132C"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:id="@+id/card"
+        app:cardCornerRadius="25dp"
+        android:layout_marginLeft="10dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:padding="15dp"
+                android:id="@+id/name"
+                android:textStyle="bold"
+                android:text="@string/name"/>
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_action_close_red"
+        android:id="@+id/delete"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20sp"
+        android:layout_centerVertical="true"/>
+
+</RelativeLayout>

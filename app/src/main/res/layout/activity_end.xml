@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EndTrip.End">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/toolbar">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_action_back_orange"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:contentDescription="@null"
+            android:id="@+id/back"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="30sp"
+            android:text="@string/summary"
+            android:id="@+id/summ"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:id="@+id/locationContainer">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/location"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="25dp"
+            android:textSize="55sp"
+            android:textStyle="bold"
+            android:layout_toStartOf="@id/logo"
+            android:textColor="@color/colorPrimaryDark"
+            android:id="@+id/location"
+            android:layout_toLeftOf="@id/logo"
+            android:layout_marginLeft="25dp" />
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:contentDescription="@null"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/bf"
+            android:id="@+id/logo"
+            android:layout_alignParentRight="true" />
+
+    </RelativeLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="25dp"
+        android:id="@+id/priceContainer"
+        android:layout_below="@+id/locationContainer"
+        android:layout_marginLeft="25dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/from"
+                    android:id="@+id/from"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimaryDark"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/date"
+                    android:id="@+id/date1"
+                    android:layout_marginStart="10dp"
+                    android:textColor="@color/grey"
+                    android:layout_marginLeft="10dp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/to"
+                    android:id="@+id/to"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimaryDark"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/date"
+                    android:id="@+id/date2"
+                    android:layout_marginStart="10dp"
+                    android:textColor="@color/grey"
+                    android:layout_marginLeft="10dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/dollar_zero"
+            android:gravity="end"
+            android:textStyle="bold"
+            android:id="@+id/price"
+            android:textColor="@color/black"
+            android:layout_marginEnd="25dp"
+            android:textSize="30sp"
+            android:layout_marginRight="25dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/priceContainer"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="25dp"
+        android:id="@+id/peopleContainer"
+        android:orientation="horizontal"
+        android:layout_marginLeft="25dp">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#2D132C"
+            app:cardCornerRadius="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_4_days"
+                android:id="@+id/days"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:paddingTop="8dp"
+                android:textStyle="bold"
+                android:paddingBottom="8dp"
+                android:paddingRight="20dp"
+                android:paddingEnd="20dp"
+                android:paddingStart="20dp"
+                android:paddingLeft="20dp" />
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#801336"
+            android:layout_marginStart="10dp"
+            app:cardCornerRadius="20dp"
+            android:layout_marginLeft="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_8_people"
+                android:id="@+id/people"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:paddingTop="8dp"
+                android:textStyle="bold"
+                android:paddingBottom="8dp"
+                android:paddingRight="20dp"
+                android:paddingEnd="20dp"
+                android:paddingStart="20dp"
+                android:paddingLeft="20dp" />
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recyclerView"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/peopleContainer"
+        android:layout_above="@+id/finishBtn"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/finish"
+        android:id="@+id/finishBtn"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:paddingStart="30dp"
+        android:paddingLeft="15dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:background="@drawable/btn_drawable"
+        android:textSize="24sp"
+        android:paddingRight="15dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/expense"
+        android:id="@+id/expenses"
+        android:visibility="gone"
+        android:layout_toStartOf="@+id/finishBtn"
+        android:layout_alignParentBottom="true"
+        style="@style/Base.Widget.AppCompat.Button.Borderless"
+        android:padding="5dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="5dp"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/sumFrame"/>
+    
+</RelativeLayout>

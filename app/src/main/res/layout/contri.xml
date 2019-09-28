@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/holders"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_toStartOf="@+id/price"
+        android:orientation="vertical"
+        android:layout_toLeftOf="@+id/price"
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="22sp"
+            android:id="@+id/head"
+            android:textStyle="bold"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/date"
+                android:id="@+id/date"
+                android:textColor="@color/grey"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                android:contentDescription="@null"
+                android:layout_margin="5dp"
+                android:src="@drawable/ic_action_dot_grey"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/time"
+                android:id="@+id/time"
+                android:textColor="@color/grey"
+                android:textStyle="bold"/>
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                android:contentDescription="@null"
+                android:layout_margin="5dp"
+                android:src="@drawable/ic_action_dot_grey"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/contributions"
+                android:id="@+id/contri"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dollar_zero"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/black"
+        android:layout_centerVertical="true"
+        android:textStyle="bold"
+        android:id="@+id/price"
+        android:layout_marginEnd="15dp"
+        android:textSize="26sp"
+        android:layout_marginRight="15dp" />
+
+</RelativeLayout>

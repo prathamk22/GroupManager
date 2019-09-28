@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#00000000"
+    android:id="@+id/frame"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".TripPackage.Contribution">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/containers"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="#92000000">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:id="@+id/cardView"
+            app:cardCornerRadius="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:layout_toStartOf="@+id/cross"
+                    android:orientation="horizontal"
+                    android:layout_toLeftOf="@+id/cross">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:contentDescription="@null"
+                        android:id="@+id/logo"
+                        android:src="@drawable/food"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/heading"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginStart="15dp"
+                        android:id="@+id/headContainer"
+                        android:layout_marginLeft="15dp" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_action_cross_orange"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="10dp"
+                    android:padding="10dp"
+                    android:id="@+id/cross"
+                    android:contentDescription="@null"
+                    android:layout_alignParentRight="true" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/recyclerView"
+                    android:layout_below="@+id/cross"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/custom_background">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/linear"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/contributions"
+                            android:textStyle="bold"
+                            android:id="@+id/contri"
+                            style="@style/Base.Widget.AppCompat.Button.Borderless"
+                            android:textColor="@color/white"/>
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_action_dot_white"
+                            android:contentDescription="@null"/>
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/add_expense"
+                            android:textStyle="bold"
+                            android:id="@+id/addExpense"
+                            style="@style/Base.Widget.AppCompat.Button.Borderless"
+                            android:textColor="@color/white"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/total"
+                        android:textColor="@color/white"
+                        android:textSize="35sp"
+                        android:textStyle="bold"
+                        android:id="@+id/total"
+                        android:layout_below="@+id/linear"
+                        android:layout_marginStart="25dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="25dp"
+                        android:layout_toStartOf="@+id/money"
+                        android:layout_above="@+id/tagLine"
+                        android:layout_toLeftOf="@+id/money" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dollar_zero"
+                        android:textColor="@color/black"
+                        android:textSize="35sp"
+                        android:id="@+id/money"
+                        android:textStyle="bold"
+                        android:layout_below="@+id/linear"
+                        android:layout_marginEnd="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_above="@+id/tagLine"
+                        android:layout_marginRight="40dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/all_expenses_showed_here_are_added_by_pratham"
+                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_alignParentBottom="true"
+                        android:id="@+id/tagLine"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+</FrameLayout>
